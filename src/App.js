@@ -157,9 +157,9 @@ const Portfolio = () => {
             <p className="text-xl md:text-2xl mb-4 text-gray-300">
               Electrical & Electronics Engineering Student @ NIT AP
             </p>
-            // <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            //   @ National Institute of Technology (NIT), Andhra Pradesh
-            // </p>
+            {/* <p className="text-xl md:text-2xl mb-4 text-gray-300">
+              @ National Institute of Technology (NIT), Andhra Pradesh
+            </p> */}
             <p className="text-lg mb-8 text-gray-400 max-w-2xl mx-auto">
               Full-Stack Developer | IoT & Embedded Systems | AI/ML | VLSI
             </p>
