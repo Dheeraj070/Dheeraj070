@@ -155,10 +155,13 @@ const Portfolio = () => {
               Dheeraj Reddy K
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-gray-300">
-              Electrical & Electronics Engineering Student
+              Electrical & Electronics Engineering Student @ NIT AP
             </p>
+            // <p className="text-xl md:text-2xl mb-4 text-gray-300">
+            //   @ National Institute of Technology (NIT), Andhra Pradesh
+            // </p>
             <p className="text-lg mb-8 text-gray-400 max-w-2xl mx-auto">
-              Full-Stack Developer | AI/ML Enthusiast | IoT & Embedded Systems Developer
+              Full-Stack Developer | IoT & Embedded Systems | AI/ML | VLSI
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <a href="mailto:dheerajreddy070@gmail.com" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
