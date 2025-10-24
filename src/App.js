@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, Instagram, Twitter, MapPin, Calendar, Award, Code, Zap, Brain, Cloud, ExternalLink, ChevronDown, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Instagram, Twitter, MapPin, //Calendar, 
+Award, Code, Zap, Brain, Cloud, ExternalLink, ChevronDown, Menu, X } from 'lucide-react';
 import logo from './assets/logo.svg';
 
 const Portfolio = () => {
-  const [activeSection, setActiveSection] = useState('hero');
+  // const [activeSection, setActiveSection] = useState('hero');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => setScrollY(window.scrollY);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
