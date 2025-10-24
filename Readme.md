@@ -4,6 +4,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dheeraj-reddy-k-505022204)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dheeraj070)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://dheeraj070.github.io/Dheeraj070/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dheerajreddy070@gmail.com)
 
 **🎓 B.Tech EEE + Minor in Software Engineering @ NIT Andhra Pradesh**  
@@ -109,6 +110,7 @@ I'm always excited to collaborate on innovative projects, especially in **Full S
 - 💡 Tech discussions and knowledge sharing
 - 🚀 Innovative project ideas
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_My_Website-FF7139?style=for-the-badge&logo=firefox)](https://dheeraj070.github.io/Dheeraj070/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Let's_Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/dheeraj-reddy-k)
 [![Email](https://img.shields.io/badge/Email-Drop_a_Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dheerajreddy070@gmail.com)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow_Me-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/Dheeraj_7x)
