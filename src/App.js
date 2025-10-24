@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState //, useEffect 
+} from 'react';
 import { Github, Linkedin, Mail, Phone, Instagram, Twitter, MapPin, //Calendar, 
 Award, Code, Zap, Brain, Cloud, ExternalLink, ChevronDown, Menu, X } from 'lucide-react';
 import logo from './assets/logo.svg';
