@@ -27,7 +27,7 @@ const Portfolio = () => {
     aiml: ['Machine Learning', 'Deep Learning', 'Reinforcement Learning', 'LSTM', 'XGBoost'],
     cloud: ['Google Cloud Platform', 'Firebase', 'CI/CD', 'GitHub Actions'],
     embedded: ['STM32', 'ESP32', 'UART', 'Embedded C', 'Arduino IDE', 'IoT'],
-    tools: ['MATLAB', 'Simulink', 'VLSI Design', 'PCB Design', 'Git']
+    tools: ['MATLAB', 'Simulink', 'VLSI Design', 'PCB Design', 'Git', 'Blackbox Optimization']
   };
 
   const projects = [
