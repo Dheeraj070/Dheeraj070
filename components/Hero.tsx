@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Github, MapPin, Code } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, Code, ShieldCheck } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           <span className="text-cyan-400 font-normal"> AI/ML Enthusiast</span>
         </h2>
         <p className="max-w-2xl text-slate-400 text-lg leading-relaxed mt-6">
-          Passionate Software Developer with experience in building robust Full Stack applications and intelligent AI/ML solutions. 
+          Passionate Software Developer with experience in building robust Full Stack applications and intelligent AI/ML solutions.
           Dedicated to solving complex problems through clean code, modern architectures, and continuous learning.
         </p>
 
@@ -36,6 +36,10 @@ const Hero: React.FC = () => {
           <a href="https://leetcode.com/u/dheerajreddy070/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors text-sm">
             <Code size={16} className="text-yellow-500" />
             <span>LeetCode</span>
+          </a>
+          <a href="https://www.credly.com/users/dheerajreddy070" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors text-sm">
+            <ShieldCheck size={16} className="text-orange-500" />
+            <span>Credly</span>
           </a>
         </div>
       </div>
