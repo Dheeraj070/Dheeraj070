@@ -23,9 +23,9 @@ const PhysicsBackground: React.FC = () => {
     let animationFrameId: number;
 
     // Physics constants
-    const PARTICLE_COUNT = 100;
+    const PARTICLE_COUNT = 200;
     const CONNECTION_DISTANCE = 100;
-    const MOUSE_RADIUS = 150;
+    const MOUSE_RADIUS = 200;
     const FORCE_FACTOR = 0.05;
 
     // Mouse state

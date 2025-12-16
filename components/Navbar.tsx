@@ -41,16 +41,16 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
-      <div className="w-[90%] md:w-[85%] max-w-7xl mx-auto flex justify-between items-center">
+      <div className="px-4 md:px-8 lg:px-12 flex justify-between items-center">
         <a 
           href="#about" 
-          className="text-xl font-bold text-white tracking-wider flex items-center gap-3 group"
+          className="text-lg md:text-xl font-bold text-white tracking-wider flex items-center gap-2 md:gap-3 group"
           onClick={(e) => handleNavClick(e, '#about')}
         >
             <div className="w-8 h-8 rounded bg-cyan-500 flex items-center justify-center text-slate-900 font-bold group-hover:scale-110 transition-transform">D</div>
-            <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-               <span>Dheeraj Reddy</span>
-               <span className="text-xs md:text-sm font-normal text-cyan-400 hidden md:block border-l border-slate-600 pl-3">Student @ NIT AP</span>
+            <div className="flex items-baseline gap-2 md:gap-3">
+               <span className="whitespace-nowrap">Dheeraj Reddy</span>
+               <span className="text-xs font-normal text-cyan-400 xl:block border-l border-slate-600 pl-2 md:pl-3 whitespace-nowrap">Student @ NIT AP</span>
             </div>
         </a>
 

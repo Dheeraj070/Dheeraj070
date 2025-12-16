@@ -6,7 +6,7 @@ import { Project } from '../types';
 const projects: Project[] = [
   {
     title: "Online Library Management System",
-    period: "Oct 2025 - Present",
+    period: "Oct 2025 - Dec 2025",
     tech: ["React.js", "Node.js", "MySQL 8.0", "Firebase Auth", "Aiven Cloud"],
     description: [
       "Engineered a Full-stack Library Management System with 15 REST endpoints connecting frontend to cloud database.",
