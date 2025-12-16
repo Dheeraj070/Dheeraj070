@@ -13,10 +13,10 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen text-slate-200">
       <PhysicsBackground />
-      
+
       <Navbar />
-      
-      <main className="container mx-auto px-6 md:px-12 relative z-10">
+
+      <main className="w-[95%] md:w-[85%] max-w-7xl mx-auto relative z-10">
         <Hero />
         <Skills />
         <Experience />

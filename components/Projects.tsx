@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SectionTitle from './SectionTitle';
-import { FolderGit2, X, Github, ExternalLink, Maximize2 } from 'lucide-react';
+import { FolderGit2, X, Github, ExternalLink, Maximize2, FileText, BookOpen, FileCode, Layers } from 'lucide-react';
 import { Project } from '../types';
 
 const projects: Project[] = [
@@ -91,8 +91,8 @@ const Projects: React.FC = () => {
       <SectionTitle>Projects</SectionTitle>
       <div className="flex flex-col gap-6">
         {projects.map((project, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="glass-card p-6 md:p-8 rounded-xl hover:bg-slate-800/40 transition-all cursor-pointer group border border-transparent hover:border-cyan-500/30"
             onClick={() => setSelectedProject(project)}
           >
@@ -104,13 +104,13 @@ const Projects: React.FC = () => {
                 <h3 className="text-xl font-bold text-white leading-tight group-hover:text-cyan-400 transition-colors">{project.title}</h3>
               </div>
               <div className="flex items-center gap-3 shrink-0">
-                 <span className="text-sm font-mono text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full border border-slate-700/50 whitespace-nowrap hidden sm:block">
+                <span className="text-sm font-mono text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full border border-slate-700/50 whitespace-nowrap hidden sm:block">
                   {project.period}
                 </span>
                 <Maximize2 size={18} className="text-slate-500 group-hover:text-cyan-400 transition-colors" />
               </div>
             </div>
-            
+
             <div className="flex flex-wrap gap-2 mb-4 ml-0 md:ml-12">
               {project.tech.slice(0, 4).map((tech, i) => (
                 <span key={i} className="text-xs px-2 py-1 rounded bg-slate-700/50 text-slate-300 border border-slate-600/50">
@@ -125,7 +125,7 @@ const Projects: React.FC = () => {
             </div>
 
             <p className="text-sm text-slate-400 ml-0 md:ml-12 line-clamp-2">
-               {project.longDescription || project.description[0]}
+              {project.longDescription || project.description[0]}
             </p>
           </div>
         ))}
@@ -133,82 +133,125 @@ const Projects: React.FC = () => {
 
       {/* Modal Overlay */}
       {selectedProject && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 pt-24 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-200"
           onClick={() => setSelectedProject(null)}
         >
-          <div 
-            className="bg-slate-900 border border-slate-700 w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 md:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200"
+          <div
+            className="bg-slate-900 border border-slate-700 w-[95%] md:w-[85%] lg:w-[60%] max-h-[85vh] overflow-y-auto rounded-2xl p-6 md:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200"
             onClick={e => e.stopPropagation()}
           >
-            <button 
+            <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-full transition-colors"
+              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-full transition-colors z-10"
             >
-              <X size={24} />
+              <X size={20} />
             </button>
 
-            <div className="mt-2">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-6 pr-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">{selectedProject.title}</h2>
-                <span className="text-cyan-400 font-mono text-sm bg-cyan-950/30 px-3 py-1 rounded-full border border-cyan-900/50 w-fit">
-                  {selectedProject.period}
-                </span>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                {selectedProject.tech.map((tech, i) => (
-                  <span key={i} className="text-sm px-3 py-1.5 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700">
-                    {tech}
+            <div className="mt-1">
+              <div className="mb-6 pr-8">
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-2">{selectedProject.title}</h2>
+                <div className="flex items-center gap-3">
+                  <span className="text-cyan-400 font-mono text-xs bg-cyan-950/30 px-3 py-1 rounded-full border border-cyan-900/50 inline-block">
+                    {selectedProject.period}
                   </span>
-                ))}
+                </div>
               </div>
 
               <div className="space-y-6">
+                {/* Tech Stack Section */}
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Project Overview</h3>
-                  <p className="text-slate-300 leading-relaxed text-base">
+                  <h4 className="text-xs font-bold text-cyan-500 uppercase tracking-wider mb-2 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <Layers size={14} /> Tech Stack
+                  </h4>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {selectedProject.tech.map((tech, i) => (
+                      <span key={i} className="text-xs px-3 py-1 rounded-md bg-slate-800 text-cyan-300 border border-slate-700">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Overview Section */}
+                <div>
+                  <h4 className="text-xs font-bold text-cyan-500 uppercase tracking-wider mb-2 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <FileText size={14} /> Overview
+                  </h4>
+                  <p className="text-slate-300 leading-relaxed text-sm mt-3">
                     {selectedProject.longDescription || "No detailed description available."}
                   </p>
                 </div>
 
+                {/* Highlights Section */}
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Key Highlights</h3>
-                  <ul className="space-y-3">
+                  <h4 className="text-xs font-bold text-cyan-500 uppercase tracking-wider mb-2 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <BookOpen size={14} /> Highlights
+                  </h4>
+                  <ul className="space-y-2 mt-3">
                     {selectedProject.description.map((desc, i) => (
-                      <li key={i} className="flex items-start gap-3 text-slate-300 bg-slate-800/30 p-3 rounded-lg border border-slate-800">
-                        <span className="text-cyan-500 mt-1">●</span>
+                      <li key={i} className="flex items-start gap-3 text-slate-300 text-sm">
+                        <span className="text-cyan-500 mt-1.5 text-xs">●</span>
                         <span className="leading-relaxed">{desc}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
+                {/* Publications Section (Conditional) */}
+                {selectedProject.publication && (
+                  <div>
+                    <h4 className="text-xs font-bold text-cyan-500 uppercase tracking-wider mb-2 flex items-center gap-2 border-b border-slate-800 pb-2">
+                      <FileText size={14} /> Publications
+                    </h4>
+                    <div className="mt-3 bg-slate-800/30 p-3 rounded-lg border border-slate-800">
+                      <p className="text-slate-300 text-sm italic">
+                        "{selectedProject.publication}"
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Source Section */}
                 {selectedProject.links && (
-                   <div className="pt-6 border-t border-slate-800 flex flex-wrap gap-4">
+                  <div className="pt-2">
+                    <h4 className="text-xs font-bold text-cyan-500 uppercase tracking-wider mb-3 border-b border-slate-800 pb-2">Source</h4>
+                    <div className="flex flex-wrap gap-3 mt-3">
                       {selectedProject.links.github && (
-                        <a 
-                          href={selectedProject.links.github} 
-                          target="_blank" 
+                        <a
+                          href={selectedProject.links.github}
+                          target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors font-medium"
+                          className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors font-medium text-xs"
                         >
-                          <Github size={20} />
-                          View Source
+                          <Github size={16} />
+                          Source Code
                         </a>
                       )}
                       {selectedProject.links.demo && (
-                         <a 
-                          href={selectedProject.links.demo} 
-                          target="_blank" 
+                        <a
+                          href={selectedProject.links.demo}
+                          target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors font-medium shadow-lg shadow-cyan-900/20"
+                          className="flex items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors font-medium shadow-lg shadow-cyan-900/20 text-xs"
                         >
-                          <ExternalLink size={20} />
+                          <ExternalLink size={16} />
                           Live Demo
                         </a>
                       )}
-                   </div>
+                      {selectedProject.links.paper && (
+                        <a
+                          href={selectedProject.links.paper}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors font-medium shadow-lg shadow-purple-900/20 text-xs"
+                        >
+                          <FileText size={16} />
+                          Read Paper
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 )}
               </div>
             </div>

@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="w-[90%] md:w-[85%] max-w-7xl mx-auto flex justify-between items-center">
         <a 
           href="#about" 
           className="text-xl font-bold text-white tracking-wider flex items-center gap-3 group"

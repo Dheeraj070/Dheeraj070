@@ -4,9 +4,11 @@ export interface Project {
   tech: string[];
   description: string[];
   longDescription?: string;
+  publication?: string; // Added optional publication field
   links?: {
     github?: string;
     demo?: string;
+    paper?: string;
   };
 }
 
